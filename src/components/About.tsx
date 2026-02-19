@@ -8,7 +8,7 @@ const About = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                 <img
                   src="/Photo/1.jpg"
-                  alt="Elony Novo"
+                  alt="Elony Nevo"
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";

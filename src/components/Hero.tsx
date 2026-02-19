@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="space-y-5 -mt-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide whitespace-nowrap">
-              Hi, I'm Elony Novo
+              Hi, I'm Elony Nevo
             </h1>
             <div className="min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center mt-28">
               <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-medium">

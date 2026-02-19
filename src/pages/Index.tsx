@@ -20,7 +20,7 @@ const Index = () => {
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm">
-            © {new Date().getFullYear()} Elony Novo. All rights reserved.
+            © {new Date().getFullYear()} Elony Nevo. All rights reserved.
           </p>
         </div>
       </footer>
