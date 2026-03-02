@@ -1,16 +1,21 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const ROLES = [
-  "AI Full-Stack Developer",
-  "Scalable Web & Mobile Developer",
+  "Web & Automation Expert",
+  "UI, API, Python Specialist",
 ];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+  
+  const projectsCount = useCountUp(50, 2000);
+  const yearsCount = useCountUp(5, 2000);
+  const successCount = useCountUp(98, 2000);
 
   useEffect(() => {
     const target = ROLES[currentIndex];
@@ -47,38 +52,56 @@ const Hero = () => {
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient"
+      aria-label="Hero section"
     >
       <ParticleBackground />
 
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto pt-16">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-32">
         <div className="animate-fade-in">
-          <div className="space-y-5 -mt-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide whitespace-nowrap">
+          <div className="space-y-5">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               Hi, I'm Elony Nevo
             </h1>
-            <div className="min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center mt-28">
-              <p className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-medium">
+            <div className="min-h-[3rem] md:min-h-[4rem] flex items-center justify-center">
+              <p className="text-3xl md:text-4xl lg:text-4xl text-white/90 font-medium" aria-live="polite" aria-atomic="true">
                 {displayed}
-                <span className="animate-pulse">|</span>
+                <span className="animate-pulse" aria-hidden="true">|</span>
               </p>
             </div>
           </div>
 
-          <div className="pt-36 flex flex-wrap gap-3 justify-center">
+          <div className="pt-32 flex flex-wrap gap-4 justify-center">
             <Button
               onClick={() => scrollTo("projects")}
               size="lg"
-              className="bg-primary text-white hover:bg-primary/90 text-base px-6 py-5 rounded-lg transition-all duration-200 hover:scale-[1.02]"
+              className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label="View my work section"
             >
               View My Work
             </Button>
             <Button
               onClick={() => scrollTo("contact")}
               size="lg"
-              className="bg-primary text-white hover:bg-primary/90 text-base px-6 py-5 rounded-lg transition-all duration-200 hover:scale-[1.02]"
+              className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              aria-label="Go to contact section"
             >
               Get In Touch
             </Button>
+          </div>
+
+          <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-3xl mx-auto">
+            <div className="text-center" ref={projectsCount.ref}>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{projectsCount.count}+</div>
+              <div className="text-sm text-white/70">Web Projects</div>
+            </div>
+            <div className="text-center" ref={yearsCount.ref}>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{yearsCount.count}+</div>
+              <div className="text-sm text-white/70">Years Experience</div>
+            </div>
+            <div className="text-center" ref={successCount.ref}>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{successCount.count}%</div>
+              <div className="text-sm text-white/70">Success Rate</div>
+            </div>
           </div>
         </div>
       </div>

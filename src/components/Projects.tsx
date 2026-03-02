@@ -5,106 +5,149 @@ interface Project {
   description: string;
   image: string;
   category: string;
+  filterCategory: string;
   stack: string;
   clientLine: string;
+  result?: string;
 }
 
 const PROJECTS: Project[] = [
   {
     title: "Financial Product & Investment Web",
-    description: "B2B FinTech product and investment returns messaging. Technology-focused positioning with clear product sections. Built for a financial or advisory client.",
+    description: "B2B FinTech product and investment returns messaging. Technology-focused positioning with clear product sections.",
     image: "/Image/image%20(4).png",
-    category: "FinTech · B2B",
+    category: "FinTech",
+    filterCategory: "Web",
     stack: "React, Node.js, TypeScript, API",
-    clientLine: "FinTech client · Product site",
+    clientLine: "FinTech client",
+    result: "45% engagement increase",
   },
   {
     title: "Analytics & Business Intelligence Dashboard",
-    description: "Analytics and BI dashboard with configurable charts, KPIs, and reports. Clean data viz and multi-tenant support for internal teams or B2B clients.",
+    description: "Analytics and BI dashboard with configurable charts, KPIs, and reports.",
     image: "/Image/image%20(8).png",
-    category: "SaaS · Data",
+    category: "SaaS",
+    filterCategory: "Web",
     stack: "React, Node.js, PostgreSQL, Redis",
-    clientLine: "B2B / internal · Analytics platform",
+    clientLine: "B2B Analytics",
+    result: "60% faster reporting",
   },
   {
     title: "Home Essentials & Furniture",
-    description: "eCommerce site for home essentials and furniture. Grid layout, clear category messaging, and a minimal aesthetic. Built for a home goods or interior-focused client.",
+    description: "eCommerce site for home essentials and furniture with minimal aesthetic.",
     image: "/Image/image%20(6).png",
-    category: "eCommerce · Web",
+    category: "eCommerce",
+    filterCategory: "eCommerce",
     stack: "React, Node.js, Stripe, PostgreSQL",
-    clientLine: "Home goods client · Online store",
+    clientLine: "Home goods client",
+    result: "2x conversion rate",
   },
   {
-    title: "Mobile App — Travel & Booking",
-    description: "Cross-platform mobile app with a polished blue UI. Built for travel, booking, or lifestyle use. One codebase for iOS and Android with consistent UX and performance.",
-    image: "/Image/image%20(3).png",
-    category: "Mobile",
-    stack: "Flutter, Node.js, Firebase",
-    clientLine: "Mobile product · Cross-platform",
+    title: "PLEATPACK eCommerce",
+    description: "Product-led eCommerce site for bags and accessories.",
+    image: "/Image/image%20(5).png",
+    category: "eCommerce",
+    filterCategory: "eCommerce",
+    stack: "React, Node.js, Stripe, CMS",
+    clientLine: "D2C brand",
   },
   {
-    title: "Honey & Gourmet Product eCommerce",
-    description: "Elegant product site for a honey or gourmet brand. Hero with product photography and clear discovery messaging. Responsive layout and simple checkout flow.",
-    image: "/Image/image%20(4).jpg",
-    category: "eCommerce · Brand",
-    stack: "React, Node.js, Stripe",
-    clientLine: "Food / CPG brand · Product site",
-  },
-  {
-    title: "Global Trading & Business Platform",
-    description: "Enterprise-grade trading and business management platform. Single-platform positioning for global operations, with a professional hero and structured content for a B2B client.",
+    title: "Global Trading Platform",
+    description: "Enterprise-grade trading and business management platform.",
     image: "/Image/image%20(3).jpg",
-    category: "SaaS · Enterprise",
+    category: "SaaS",
+    filterCategory: "Web",
     stack: "React, Node.js, PostgreSQL, Redis",
-    clientLine: "B2B client · Trading platform",
+    clientLine: "B2B Trading",
+    result: "10K+ daily transactions",
   },
   {
     title: "FinTech Investment Platform",
-    description: "Professional web platform for investment and wealth management. Clean UI with product and returns-focused messaging, built for a financial services client. Responsive, accessible, and conversion-oriented.",
+    description: "Professional web platform for investment and wealth management.",
     image: "/Image/image%20(1).png",
-    category: "FinTech · Web",
-    stack: "React, Node.js, TypeScript, REST API",
-    clientLine: "Financial services · Web platform",
+    category: "FinTech",
+    filterCategory: "Web",
+    stack: "React, Node.js, TypeScript, API",
+    clientLine: "Financial services",
+    result: "$2M+ investments",
   },
   {
-    title: "Live & Travel Platform",
-    description: "Travel and live-experience platform with a bold dark theme. Social and content integration. Built for a travel, events, or lifestyle brand.",
+    title: "Travel Platform",
+    description: "Travel and live-experience platform with social integration.",
     image: "/Image/image%20(9).PNG",
-    category: "Web · Travel",
+    category: "Web",
+    filterCategory: "Web",
     stack: "React, Node.js, REST API",
-    clientLine: "Travel / lifestyle · Web platform",
+    clientLine: "Travel brand",
   },
   {
-    title: "Grocery & Quick-Delivery Platform",
-    description: "eCommerce and delivery web app with fast fulfillment messaging (e.g. 2-hour delivery). Illustrative hero, clear CTAs, and a modern stack for a retail or logistics client.",
+    title: "Grocery Delivery Platform",
+    description: "eCommerce and delivery web app with 2-hour delivery.",
     image: "/Image/image%20(2).png",
-    category: "eCommerce · Web",
+    category: "eCommerce",
+    filterCategory: "eCommerce",
     stack: "React, Node.js, Stripe, PostgreSQL",
-    clientLine: "Retail / logistics · Delivery platform",
+    clientLine: "Retail logistics",
+    result: "50% faster checkout",
   },
   {
-    title: "PLEATPACK Product & eCommerce",
-    description: "Product-led eCommerce site for bags and accessories. Dark theme, strong hero copy, and feature highlights. Scalable catalog and checkout for a D2C brand.",
-    image: "/Image/image%20(5).png",
-    category: "eCommerce · D2C",
-    stack: "React, Node.js, Stripe, CMS",
-    clientLine: "D2C brand · Product showcase",
+    title: "Honey & Gourmet Product eCommerce",
+    description: "Elegant product site for a honey brand with product photography.",
+    image: "/Image/image%20(4).jpg",
+    category: "eCommerce",
+    filterCategory: "eCommerce",
+    stack: "React, Node.js, Stripe",
+    clientLine: "Food brand",
+    result: "40% sales increase",
   },
   {
-    title: "Taxi Driver Web App & Dashboard",
-    description: "Driver-facing web app and dashboard for a taxi or ride-hail fleet. Earnings, trips, and activity metrics with charts and clear data hierarchy. Role-based access and real-time updates.",
+    title: "Web Scraping & Data Pipeline",
+    description: "Automated data extraction and processing system with scheduled jobs and data validation.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    category: "Automation",
+    filterCategory: "Automation",
+    stack: "Python, Selenium, BeautifulSoup, PostgreSQL",
+    clientLine: "Data analytics firm",
+    result: "10K+ records processed daily",
+  },
+  {
+    title: "Business Process Automation",
+    description: "Custom workflow automation platform for invoice processing, approvals, and notifications.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+    category: "Automation",
+    filterCategory: "Automation",
+    stack: "Python, FastAPI, React, RabbitMQ",
+    clientLine: "Enterprise client",
+    result: "50% reduction in manual work",
+  },
+  {
+    title: "Taxi Driver Dashboard",
+    description: "Driver-facing web app with earnings and trip metrics.",
     image: "/Image/image%20(7).png",
-    category: "SaaS · Mobility",
+    category: "SaaS",
+    filterCategory: "Automation",
     stack: "React, Node.js, WebSockets, PostgreSQL",
-    clientLine: "Mobility client · Driver dashboard",
+    clientLine: "Mobility client",
+    result: "500+ drivers real-time",
   },
   {
-    title: "Retail Branding & Signage (IVCH)",
-    description: "Branding and storefront signage for a retail or commercial client. Cohesive identity applied to exterior and wayfinding. Delivered as part of a broader brand and digital rollout.",
+    title: "Email Campaign Automation System",
+    description: "Automated email marketing platform with scheduling, segmentation, and analytics tracking.",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+    category: "Automation",
+    filterCategory: "Automation",
+    stack: "Python, FastAPI, Celery, Redis",
+    clientLine: "Marketing agency",
+    result: "70% time saved on campaigns",
+  },
+  {
+    title: "Retail Branding",
+    description: "Branding and storefront signage for retail client.",
     image: "/Image/image%20(2).jpg",
-    category: "Branding · Retail",
-    stack: "Design system, Web, Print",
-    clientLine: "Retail client · Brand & signage",
+    category: "Branding",
+    filterCategory: "Web",
+    stack: "Design system, Web",
+    clientLine: "Retail client",
   },
 ];
 
@@ -112,34 +155,59 @@ const INITIAL_COUNT = 6;
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
-  const displayed = showAll ? PROJECTS : PROJECTS.slice(0, INITIAL_COUNT);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filters = ["All", "Web", "eCommerce", "Automation"];
+
+  const filteredProjects = activeFilter === "All" 
+    ? PROJECTS 
+    : PROJECTS.filter(p => p.filterCategory === activeFilter);
+
+  const displayed = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_COUNT);
 
   return (
-    <section id="projects" className="py-24 bg-background">
+    <section id="projects" className="py-24 bg-background" aria-labelledby="projects-heading">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-4 animate-fade-in">
+          <h2 id="projects-heading" className="text-4xl md:text-5xl font-bold text-foreground text-center mb-4">
             Selected Projects
           </h2>
-          <p className="text-center text-muted-foreground mb-2 animate-fade-in max-w-2xl mx-auto">
-            Production-ready applications I've built for startups and clients — web, mobile, and full-stack.
-          </p>
-          <p className="text-center text-muted-foreground text-sm mb-12 animate-fade-in max-w-xl mx-auto">
-            Real project screenshots. Each card reflects delivered work for clients and products.
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Production-ready web applications with proven results for startups and clients
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  setShowAll(false);
+                }}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 ${
+                  activeFilter === filter
+                    ? "bg-primary text-white shadow-lg scale-105"
+                    : "bg-card text-muted-foreground hover:bg-primary/10 hover:text-primary border border-border"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
             {displayed.map((project, index) => (
-              <div
+              <article
                 key={index}
-                className="bg-card rounded-xl overflow-hidden shadow-lg hover-lift animate-fade-in-up group border border-border/50"
+                className="bg-gradient-to-br from-card to-card/50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border-2 border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-2 group"
                 style={{ animationDelay: `${index * 0.05}s` }}
+                role="listitem"
               >
                 <div className="relative overflow-hidden aspect-video bg-muted">
                   <img
                     src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    alt={`Screenshot of ${project.title}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                     decoding="async"
                     onError={(e) => {
@@ -147,35 +215,51 @@ const Projects = () => {
                       e.currentTarget.src = "/placeholder.svg";
                     }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute top-3 right-3">
-                    <span className="px-3 py-1.5 bg-primary text-white rounded-lg text-xs font-semibold shadow">
+                    <span className="px-3 py-1.5 bg-primary text-white rounded-full text-xs font-semibold shadow-lg">
                       {project.category}
                     </span>
                   </div>
+                  {project.result && (
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-green-500/90 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm font-semibold">
+                        ✓ {project.result}
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  <p className="text-xs text-muted-foreground mb-2 italic">
+                  <p className="text-xs text-muted-foreground mb-3 italic">
                     {project.clientLine}
                   </p>
-                  <p className="text-xs text-primary font-medium">
-                    {project.stack}
-                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.split(", ").map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
 
-          {!showAll && PROJECTS.length > INITIAL_COUNT && (
+          {!showAll && filteredProjects.length > INITIAL_COUNT && (
             <div className="text-center mt-12">
               <button
                 onClick={() => setShowAll(true)}
-                className="bg-primary text-white hover:bg-primary/90 text-lg font-medium px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-primary to-accent text-white hover:shadow-xl text-lg font-medium px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label="View more projects"
               >
                 View More Projects
               </button>

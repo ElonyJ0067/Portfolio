@@ -17,7 +17,7 @@ const Index = () => {
       <Testimonials />
       <Contact />
       
-      <footer className="bg-foreground text-background py-8">
+      <footer className="bg-foreground text-background py-8" role="contentinfo">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm">
             © {new Date().getFullYear()} Elony Nevo. All rights reserved.
