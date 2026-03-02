@@ -1,21 +1,16 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import ParticleBackground from "./ParticleBackground";
-import { useCountUp } from "@/hooks/useCountUp";
 
 const ROLES = [
+  "Full-Stack Developer",
   "Web & Automation Expert",
-  "UI, API, Python Specialist",
 ];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayed, setDisplayed] = useState("");
   const [isTyping, setIsTyping] = useState(true);
-  
-  const projectsCount = useCountUp(50, 2000);
-  const yearsCount = useCountUp(5, 2000);
-  const successCount = useCountUp(98, 2000);
 
   useEffect(() => {
     const target = ROLES[currentIndex];
@@ -56,9 +51,9 @@ const Hero = () => {
     >
       <ParticleBackground />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-32">
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-4">
         <div className="animate-fade-in">
-          <div className="space-y-5">
+          <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               Hi, I'm Elony Nevo
             </h1>
@@ -87,21 +82,6 @@ const Hero = () => {
             >
               Get In Touch
             </Button>
-          </div>
-
-          <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-3xl mx-auto">
-            <div className="text-center" ref={projectsCount.ref}>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{projectsCount.count}+</div>
-              <div className="text-sm text-white/70">Web Projects</div>
-            </div>
-            <div className="text-center" ref={yearsCount.ref}>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{yearsCount.count}+</div>
-              <div className="text-sm text-white/70">Years Experience</div>
-            </div>
-            <div className="text-center" ref={successCount.ref}>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">{successCount.count}%</div>
-              <div className="text-sm text-white/70">Success Rate</div>
-            </div>
           </div>
         </div>
       </div>
