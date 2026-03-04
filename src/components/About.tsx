@@ -3,7 +3,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 const About = () => {
   const projectsCount = useCountUp(50, 2000);
   const satisfactionCount = useCountUp(98, 2000);
-  const yearsCount = useCountUp(5, 2000);
+  const yearsCount = useCountUp(6, 2000);
 
   return (
     <section id="about" className="py-24 bg-background" aria-labelledby="about-heading">
@@ -14,7 +14,7 @@ const About = () => {
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                 <img
                   src="/Photo/1.jpg"
-                  alt="Elony Nevo - Full-Stack Developer"
+                  alt="Elony Yutzu - Full-Stack Developer"
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
                   onError={(e) => {
@@ -26,7 +26,7 @@ const About = () => {
                 <div
                   className="w-full h-full bg-primary/10 hidden items-center justify-center text-5xl font-bold text-primary"
                   style={{ display: "none" }}
-                  aria-label="Elony Nevo initials"
+                  aria-label="Elony Yutzu initials"
                 >
                   EN
                 </div>
@@ -39,7 +39,7 @@ const About = () => {
               About Me
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a Full-Stack developer with 5+ years of experience, specializing in scalable web platforms, UI development, APIs, Python automation, and backend solutions.
+              I'm a Full-Stack developer with 6+ years of experience, specializing in scalable web platforms, UI development, APIs, Python automation, and backend solutions.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               I've delivered 50+ projects for startups and private clients, building production-ready 
@@ -48,7 +48,7 @@ const About = () => {
 
             <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
               <p className="text-foreground font-semibold">
-                Core - Web & Automation Expert | UI, API, Data Solution
+                Core - Web & Automation Engineer | UI, API, Data Solution
               </p>
             </div>
 

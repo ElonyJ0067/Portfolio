@@ -175,7 +175,7 @@ const Skills = () => {
             <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm rounded-full border-2 border-primary/20 shadow-lg">
               <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
               <p className="text-foreground font-semibold text-lg">
-                5+ Years of Professional Experience
+                6+ Years of Professional Experience
               </p>
             </div>
           </div>
